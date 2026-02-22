@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BreakSeven – Digital Architects</title>
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<style>
+:root {
+    --electric-orange: #ff6b00;
+}
+
+/* CTA Button */
+.cta-button {
+    background: linear-gradient(135deg, #ff6b00, #ff8c1a);
+    color: #000;
+    font-weight: 800;
+    transition: all 0.3s ease;
+}
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(255, 107, 0, 0.45);
+}
+
+/* Animations */
+.service-item,
+.portfolio-item {
+    opacity: 0;
+    transform: translateY(30px);
+}
+.service-item.show,
+.portfolio-item.show {
+    animation: fadeUp 0.6s ease forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+</head>
+
+<body class="bg-black text-white px-6 md:px-10">
+
+<!-- ================= HERO ================= -->
+<section id="home" class="py-20 md:py-32 text-center">
+    <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black mb-6 leading-tight">
+        BREAK THE <span style="color: var(--electric-orange);">ORDINARY</span><br>
+        DEFINE THE DIGITAL.
+    </h1>
+    <p class="text-xl sm:text-2xl text-gray-400 max-w-4xl mx-auto mb-12">
+        We are the architects of next-generation digital experiences, merging
+        <b>AI automation</b>, <b>3D visualization</b>, and <b>unrivaled strategy</b>
+        to dominate your market.
+    </p>
+    <button onclick="goToWhatsApp('Full Project Discussion')" class="cta-button text-lg px-10 py-4 rounded-xl shadow-2xl">
+        <i data-lucide="zap" class="w-6 h-6 inline mr-3"></i>
+        ELEVATE MY BRAND NOW
+    </button>
+</section>
+
+<!-- ================= PORTFOLIO ================= -->
+<section id="portfolio" class="mb-24 max-w-7xl mx-auto">
+<h2 class="text-3xl font-bold mb-12 text-center">
+    <span class="text-orange-500">Our</span> Portfolio
+</h2>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="portfolio-item rounded-xl overflow-hidden border border-gray-800">
+        <video src="videos/V3.mp4" autoplay muted loop class="w-full h-56 object-cover"></video>
+        <div class="p-4 font-semibold">Brand Promo Video</div>
+    </div>
+    <div class="portfolio-item rounded-xl overflow-hidden border border-gray-800">
+        <video src="videos/V5.mp4" autoplay muted loop class="w-full h-56 object-cover"></video>
+        <div class="p-4 font-semibold">Social Media Ad</div>
+    </div>
+    <div class="portfolio-item rounded-xl overflow-hidden border border-gray-800">
+        <video src="videos/V4.mp4" autoplay muted loop class="w-full h-56 object-cover"></video>
+        <div class="p-4 font-semibold">Product Showcase</div>
+    </div>
+    <div class="portfolio-item rounded-xl overflow-hidden border border-gray-800">
+        <video src="videos/V7.mp4" autoplay muted loop class="w-full h-56 object-cover"></video>
+        <div class="p-4 font-semibold">Motion Graphics</div>
+    </div>
+    <div class="portfolio-item rounded-xl overflow-hidden border border-gray-800">
+        <video src="videos/V2.mp4" autoplay muted loop class="w-full h-56 object-cover"></video>
+        <div class="p-4 font-semibold">Animation Project</div>
+    </div>
+    <div class="portfolio-item rounded-xl overflow-hidden border border-gray-800">
+        <video src="videos/V6.mp4" autoplay muted loop class="w-full h-56 object-cover"></video>
+        <div class="p-4 font-semibold">Wedding Editing</div>
+    </div>
+</div>
+</section>
+
+<!-- ================= CORE PILLARS ================= -->
+<section class="py-20 border-b border-gray-800">
+<h2 class="text-4xl sm:text-5xl font-extrabold text-center mb-16">
+    Our <span style="color: var(--electric-orange);">Core Pillars</span>
+</h2>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-7xl mx-auto">
+
+    <div class="bg-gray-900/50 p-8 rounded-2xl border border-gray-700 hover:border-gray-500 transition text-center cursor-pointer"
+        onclick="goToWhatsApp('CGI & 3D Animation')">
+        <i data-lucide="cube" class="w-10 h-10 mx-auto mb-4 text-orange-500"></i>
+        <h3 class="text-2xl font-bold mb-3">CGI & 3D Animation</h3>
+        <p class="text-gray-400">Hyper-realistic product visuals and cinematic motion graphics.</p>
+    </div>
+
+    <div class="bg-gray-900/50 p-8 rounded-2xl border border-gray-700 hover:border-gray-500 transition text-center cursor-pointer"
+        onclick="goToWhatsApp('AI Automation')">
+        <i data-lucide="robot" class="w-10 h-10 mx-auto mb-4 text-orange-500"></i>
+        <h3 class="text-2xl font-bold mb-3">AI Automation</h3>
+        <p class="text-gray-400">Lead qualification, workflow automation & growth systems.</p>
+    </div>
+
+    <div class="bg-gray-900/50 p-8 rounded-2xl border border-gray-700 hover:border-gray-500 transition text-center cursor-pointer"
+        onclick="goToWhatsApp('Web & App Development')">
+        <i data-lucide="code" class="w-10 h-10 mx-auto mb-4 text-orange-500"></i>
+        <h3 class="text-2xl font-bold mb-3">Web & App Development</h3>
+        <p class="text-gray-400">High-performance websites and scalable mobile apps.</p>
+    </div>
+
+</div>
+</section>
+
+<!-- ================= ALL SERVICES ================= -->
+<section class="py-20">
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+
+<div class="service-item p-4 rounded-lg border border-gray-800 text-center"><i data-lucide="video" class="w-6 h-6 mb-2 inline text-orange-500"></i><p>Video Editing</p></div>
+<div class="service-item p-4 rounded-lg border border-gray-800 text-center"><i data-lucide="palette" class="w-6 h-6 mb-2 inline text-orange-500"></i><p>Graphic Design</p></div>
+<div class="service-item p-4 rounded-lg border border-gray-800 text-center"><i data-lucide="camera-off" class="w-6 h-6 mb-2 inline text-orange-500"></i><p>CGI Ads</p></div>
+<div class="service-item p-4 rounded-lg border border-gray-800 text-center"><i data-lucide="trending-up" class="w-6 h-6 mb-2 inline text-orange-500"></i><p>SEO</p></div>
+<div class="service-item p-4 rounded-lg border border-gray-800 text-center"><i data-lucide="megaphone" class="w-6 h-6 mb-2 inline text-orange-500"></i><p>Social Media Management</p></div>
+<div class="service-item p-4 rounded-lg border border-gray-800 text-center"><i data-lucide="crown" class="w-6 h-6 mb-2 inline text-orange-500"></i><p>Brand Management</p></div>
+<div class="service-item p-4 rounded-lg border border-gray-800 text-center"><i data-lucide="target" class="w-6 h-6 mb-2 inline text-orange-500"></i><p>Lead Generation</p></div>
+<div class="service-item p-4 rounded-lg border border-gray-800 text-center"><i data-lucide="brain" class="w-6 h-6 mb-2 inline text-orange-500"></i><p>AI Automation</p></div>
+<div class="service-item p-4 rounded-lg border border-gray-800 text-center"><i data-lucide="rocket" class="w-6 h-6 mb-2 inline text-orange-500"></i><p>2D / 3D Animation</p></div>
+<div class="service-item p-4 rounded-lg border border-gray-800 text-center"><i data-lucide="monitor" class="w-6 h-6 mb-2 inline text-orange-500"></i><p>Website Development</p></div>
+
+<!-- FIXED ICONS -->
+<div class="service-item p-4 rounded-lg border border-gray-800 text-center">
+    <i data-lucide="smartphone" class="w-6 h-6 mb-2 inline text-orange-500"></i>
+    <p>Android Development</p>
+</div>
+
+<div class="service-item p-4 rounded-lg border border-gray-800 text-center">
+    <i data-lucide="megaphone" class="w-6 h-6 mb-2 inline text-orange-500"></i>
+    <p>Digital Marketing</p>
+</div>
+
+</div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="py-12 border-t border-gray-800 text-center">
+    <h3 class="text-2xl font-extrabold mb-2">
+        <span class="text-orange-500">BREAK</span>SEVEN
+    </h3>
+    <p class="text-gray-500 mb-4">Break barriers. Build legacy.</p>
+    <p class="text-gray-600 text-sm">© 2025 BreakSeven. All rights reserved.</p>
+</footer>
+
+<script>
+lucide.createIcons();
+
+function goToWhatsApp(service) {
+    const msg = service ? `Hello, I’m interested in ${service}` : "Hello!";
+    window.open(`https://wa.me/919636045140?text=${encodeURIComponent(msg)}`, "_blank");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".service-item").forEach((el, i) =>
+        setTimeout(() => el.classList.add("show"), i * 100)
+    );
+    document.querySelectorAll(".portfolio-item").forEach((el, i) =>
+        setTimeout(() => el.classList.add("show"), i * 150)
+    );
+});
+</script>
+
+</body>
+</html>
